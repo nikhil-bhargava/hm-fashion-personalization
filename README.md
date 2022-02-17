@@ -1,1 +1,1 @@
-# hm-fashion-personalization
+# cv-mask-detection
