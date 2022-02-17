@@ -1,1 +1,1 @@
-# cv-mask-detection
+# H&M Personalized Fashion Recommendations
