@@ -1,5 +1,7 @@
 # H&M Personalized Fashion Recommendations
 
+![hm-fashion 001](https://user-images.githubusercontent.com/31523376/165661851-b91c24a0-4550-4b85-a1f2-1dc28498c2ee.jpeg)
+
 ## Introduction
 
 H&M Group has over 53 online marketplaces and approximately 5,000 stores. With thousands of options of  clothes, it’s difficult for customers to find what they like. By personalizing the shopping experience, they believe they can solve this issue. Therefore, the goal of this project is to create a model that will provide product recommendations given H&M transaction, article, and customer data
@@ -18,8 +20,6 @@ Two main approaches were used for this project, a User-User Collaborative filter
 
 ![hm-fashion 007](https://user-images.githubusercontent.com/31523376/165660380-c39f5a1d-8b66-4aba-99c3-04b1f2296a70.jpeg)
 
-To bypass model training, download the pickle files located [here](https://www.kaggle.com/c/h-and-m-personalized-fashion-recommendations) and move them to the `models/` folder.
-
 ## Getting Started
 
 To re-train the models, and make predictions:
@@ -27,13 +27,15 @@ To re-train the models, and make predictions:
   2. To train the collaborative filtering model, and make predictions, run the script: `python cf_model.py`.
   3. To train the Neural Network Hybrid Recommender, and make predictions, run the script: `python nn_model.py`.
 
+To bypass model training, download the pickle files located [here](https://drive.google.com/drive/folders/1zl3L4c3bBs5-FXpKkxG9MJgvD5HINPgP?usp=sharing) and move them to the `models/` folder. While the collaborative filtering model is not a traditional model, the dataset of user purchases can be downloaded as `app.csv` and the neural net model can be found under `nn_model.pickle`.
+
 ## Demo
 
 Given a new customer joins H&M, and has never purchased anything, how do we provide product recommendations? This app created is intended to solve that issue by asking new users to input preferences at the start. Recommendations will then be provided using the collaborative filtering algorithm.
 
 To run the app locally,
   1. Download the data [here](https://www.kaggle.com/c/h-and-m-personalized-fashion-recommendations). Move data to the `data/00_raw` folder.
-  2. Download the data [here](https://www.kaggle.com/c/h-and-m-personalized-fashion-recommendations). Move data to the `data/01_processed` folder.
+  2. Download the data [here](https://drive.google.com/drive/folders/1zl3L4c3bBs5-FXpKkxG9MJgvD5HINPgP?usp=sharing). Move data to the `data/01_processed` folder.
   3. Use the following command to run the app: `streamlit run app.py` or `streamlit run app_local.py`
 
 The app created on streamlit and deployed on GCP App Engine, can be found [here](https://hm-fashion-rec.uc.r.appspot.com/).
